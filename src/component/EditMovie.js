@@ -27,7 +27,7 @@ myOnChange =(e)=>{
 
 async componentDidMount() {
     const id = this.props.match.params.id;
-    const url = "https://localhost:5001/api/movies/"+id;
+    const url = "https://bsite.net/rahibjafar7/api/movies/"+id;
     var response = await axios.get(url);
     const movie = response.data;
     this.setState({

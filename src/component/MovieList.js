@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 
 
 const MovieList = (props) => {
-    
         return (
             <div className="row">
                 {props.movies.map((movie,i) => (

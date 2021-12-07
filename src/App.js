@@ -14,21 +14,21 @@ class App extends React.Component {
     const obj = movie;
     obj.id = id;
     //console.log(obj);
-    const url = "https://localhost:5001/api/movies/";
+    const url = "https://bsite.net/rahibjafar7/api/movies/";
     await axios.put(url,obj);
     await this.getInfo();
   }
 
   AddMovieF = async (movie) =>{
     //console.log(movie);
-    const url = "https://localhost:5001/api/movies/";
+    const url = "https://bsite.net/rahibjafar7/api/movies/";
     await axios.post(url,movie);
 
     this.setState(state =>({movies : state.movies.concat(movie)}));
   }
 
   DeleteMovie = async (movie) => {
-    const url = "https://localhost:5001/api/movies?id=" + movie.id;
+    const url = "https://bsite.net/rahibjafar7/api/movies?id=" + movie.id;
     await axios.delete(url);
 
     const newState = this.state.movies.filter(m => m.id !== movie.id);
@@ -47,7 +47,7 @@ class App extends React.Component {
   }
 
   async getInfo(){
-    const url = "https://localhost:5001/api/movies";
+    const url = "https://bsite.net/rahibjafar7/api/movies";
     var response = await axios.get(url);
     //console.log(response.data);
     this.setState({ movies: response.data });
